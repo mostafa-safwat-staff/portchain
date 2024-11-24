@@ -29,7 +29,9 @@ server.register(app);
 server.ready((err) => {
     if (err) throw err;
 
-    const { PORT: port, HOST: host } = server.config;
+    // Get PORT and HOST from process.env or config
+    const port = process.env.PORT || server.config.PORT;
+    const host = process.env.HOST || server.config.HOST || '0.0.0.0';
 
     // Start listening.
     server.listen({ port, host }, (err) => {

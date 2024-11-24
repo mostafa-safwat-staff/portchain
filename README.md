@@ -54,6 +54,12 @@ Install dependencies
   npm install
 ```
 
+Build the Apps
+
+```bash
+  npm run build
+```
+
 Start the app
 
 ```bash
