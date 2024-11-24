@@ -95,6 +95,14 @@ To deploy this project run
   npm run deploy
 ```
 
+## Run
+
+To deploy this project run
+
+```bash
+  npm run lint
+```
+
 ## Authors
 
 -   [@Moustafa Kotb](https://www.linkedin.com/in/moustafase/)
