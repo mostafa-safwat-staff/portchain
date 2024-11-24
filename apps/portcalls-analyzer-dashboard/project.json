@@ -1,0 +1,10 @@
+{
+    "name": "portcalls-analyzer-dashboard",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/portcalls-analyzer-dashboard",
+    "projectType": "application",
+    "implicitDependencies": ["portcalls-analyzer-api"],
+    "tags": [],
+    "// targets": "to see all targets run: nx show project portcalls-analyzer-dashboard --web",
+    "targets": {}
+}

@@ -54,10 +54,6 @@
           "buildTarget": "portcalls-analyzer-api:build:production"
         }
       }
-    },
-    "docker-build": {
-      "dependsOn": ["build"],
-      "command": "docker build -f apps/portcalls-analyzer-api/Dockerfile . -t portcalls-analyzer-api"
     }
   }
 }
