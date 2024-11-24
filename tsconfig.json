@@ -1,0 +1,19 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compileOnSave": false,
+    "files": [],
+    "references": [
+        {
+            "path": "./apps/portcalls-analyzer-api"
+        },
+        {
+            "path": "./apps/portcalls-analyzer-api-e2e"
+        },
+        {
+            "path": "./apps/portcalls-analyzer-dashboard"
+        },
+        {
+            "path": "./apps/portcalls-analyzer-dashboard-e2e"
+        }
+    ]
+}
