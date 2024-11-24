@@ -36,7 +36,7 @@
             "options": {
                 "targetName": "test"
             },
-            "exclude": ["apps/portcalls-analyzer-api-e2e/**/*", "apps/portcalls-analyzer-dashboard-e2e/**/*"]
+            "exclude": ["apps/portcalls-analyzer-api-e2e/**/*"]
         },
         {
             "plugin": "@nx/next/plugin",

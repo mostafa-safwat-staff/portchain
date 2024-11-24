@@ -7,7 +7,7 @@
         "build:production": "npx nx run-many --target=build --production",
         "start": "npx nx serve portcalls-analyzer-api & npx nx dev portcalls-analyzer-dashboard",
         "test": "npx nx test portcalls-analyzer-api && npx nx test portcalls-analyzer-dashboard",
-        "test:e2e2": "npx nx e2e portcalls-analyzer-api-e2e && npx nx e2e portcalls-analyzer-dashboard-e2e",
+        "test:e2e": "npx nx e2e portcalls-analyzer-api-e2e",
         "format": "npx nx format",
         "format:fix": "npx nx format:write --all",
         "lint": "npx nx run-many --target=lint"

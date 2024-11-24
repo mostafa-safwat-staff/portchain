@@ -11,9 +11,6 @@
         },
         {
             "path": "./apps/portcalls-analyzer-dashboard"
-        },
-        {
-            "path": "./apps/portcalls-analyzer-dashboard-e2e"
         }
     ]
 }
