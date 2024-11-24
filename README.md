@@ -26,13 +26,23 @@ The pipeline can be build using data technologies like Apache Airflow, Spark, Ku
 
 Simple **Asynchronous Batch Processing** approach. This approach involves processing data in predefined batches, allowing for parallel execution of tasks. Unlike the event-driven or Airflow-based solutions, this method offers a more straightforward implementation but may lack the scalability and flexibility required for large or complex workflows.
 
+FrontEnd: apps/portcalls-analyzer-dashboard
+
+BackEnd: apps/portcalls-analyzer-api
+
 ## Getting Started
 
 ### Tech Stack
 
-**Client:** Next.js, 
+**Client:** Next.js
 
 **Server:** Node, Fastify
+
+**Continues Integration** Github Workflows
+
+**Others** Jest, NX, Eslint, Prettier
+
+**Continues Deployment** (Not used: Without using Docker or Serverless)
 
 ### Run Locally
 
