@@ -105,7 +105,10 @@ export default function Index() {
                                 </svg>
                                 <span>Port Calls Analysis</span>
                             </h2>
-                            <a href="https://github.com/mostafa-safwat-staff/portchain"> Github! </a>
+                            <a href="https://github.com/mostafa-safwat-staff/portchain">
+                                {' '}
+                                Github!{' '}
+                            </a>
                         </div>
                         <div className="logo-container">
                             <img

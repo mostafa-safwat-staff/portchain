@@ -1,8 +1,6 @@
 import { Schedule, Vessel } from '../types/portChain.types';
 import { BaseHttpService } from './BaseHttpService';
 
-
-
 export type Context = {
     baseUrl: string;
 };

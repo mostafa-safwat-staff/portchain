@@ -12,7 +12,7 @@
         "test:e2e": "npx nx e2e portcalls-analyzer-api-e2e",
         "format": "npx nx format",
         "format:fix": "npx nx format:write --all",
-        "lint": "npx nx run-many --target=lint"
+        "lint": "npx nx run-many --target=lint --fix"
     },
     "private": true,
     "dependencies": {

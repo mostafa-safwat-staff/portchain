@@ -86,7 +86,6 @@ To run e2e tests, run the following command
 
 Note: Ensure the application is running by executing npm run start beforehand.
 
-
 ## Other commands
 
 ```bash
@@ -102,7 +101,7 @@ Note: Ensure the application is running by executing npm run start beforehand.
   GET /api/statistics
 ```
 
-Response Example: 
+Response Example:
 
 ```json
 {

@@ -6,6 +6,5 @@
     "implicitDependencies": ["portcalls-analyzer-api"],
     "tags": [],
     "// targets": "to see all targets run: nx show project portcalls-analyzer-dashboard --web",
-    "targets": {
-    }
+    "targets": {}
 }

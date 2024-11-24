@@ -15,4 +15,3 @@ const applicationServices = async (fastify: FastifyInstance, opts: PluginOptions
 };
 
 export default fastifyPlugins(applicationServices);
-

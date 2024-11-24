@@ -16,7 +16,8 @@ export const getStatistics = async (req: FastifyRequest, reply: FastifyReply) =>
             batch.map((vessel) => portChainService.getPortCallsSchedules(vessel.imo))
         );
 
-        schedules.flatMap((schedule) => schedule.portCalls)
+        schedules
+            .flatMap((schedule) => schedule.portCalls)
             .filter((portCall) => !portCall.isOmitted)
             .forEach((portCall) => {
                 const portId = portCall.port.id;
@@ -46,8 +47,9 @@ function computeStatistics(
     portVisitCounts: Map<string, number>,
     portDurationsMap: Map<string, number[]>
 ) {
-    const sortedPortsByVisits = Array.from(portVisitCounts.entries())
-        .sort(([, countA], [, countB]) => countB - countA);
+    const sortedPortsByVisits = Array.from(portVisitCounts.entries()).sort(
+        ([, countA], [, countB]) => countB - countA
+    );
 
     // Extract top 5 and bottom 5 ports based on visit counts
     const top5Ports = sortedPortsByVisits.slice(0, 5);
