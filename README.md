@@ -73,11 +73,13 @@ Start the server
 
 ### Running Tests
 
-To run tests, run the following command
+To run e2e tests, run the following command
 
 ```bash
-  npm run test
+  npm run test:e2e
 ```
+
+Note: Ensure the application is running by executing npm run start beforehand.
 
 ## Environment Variables
 
