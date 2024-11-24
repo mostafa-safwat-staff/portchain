@@ -10,7 +10,6 @@
 
 //     beforeEach(() => {
 //         portChainService = new PortChainService({ baseUrl });
-//         console.log('>>>>4', portChainService);
 //     });
 
 //     afterEach(() => {

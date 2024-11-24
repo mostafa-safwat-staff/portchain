@@ -30,33 +30,22 @@ Simple **Asynchronous Batch Processing** approach. This approach involves proces
 
 ### Tech Stack
 
-**Client:** NX, React, Redux, TailwindCSS
+**Client:** Next.js, 
 
 **Server:** Node, Fastify
-
-**Storage:** MongoDB
-
-### Installation
-
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
 
 ### Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/mostafa-safwat-staff/portchain
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd portchain
 ```
 
 Install dependencies
@@ -65,7 +54,7 @@ Install dependencies
   npm install
 ```
 
-Start the server
+Start the app
 
 ```bash
   npm run start
@@ -81,49 +70,13 @@ To run e2e tests, run the following command
 
 Note: Ensure the application is running by executing npm run start beforehand.
 
-## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
-
-## Run
-
-To deploy this project run
+## Other commands
 
 ```bash
   npm run lint
+  npm run format
 ```
-
-## Authors
-
--   [@Moustafa Kotb](https://www.linkedin.com/in/moustafase/)
-
-## Usage/Examples
-
-```javascript
-import Component from 'my-project';
-
-function App() {
-    return <Component />;
-}
-```
-
-## Roadmap
-
--   Additional browser support
-
--   Add more integrations
 
 ## API Reference
 
@@ -133,3 +86,46 @@ function App() {
   GET /api/statistics
 ```
 
+Response Example: 
+
+```json
+{
+  "top5Ports": [
+    ["DEHAM", 23],
+    ["MAPTM", 14],
+    ["JPTYO", 14],
+    ["BEANR", 11],
+    ["TWKHH", 11]
+  ],
+  "bottom5Ports": [
+    ["VNHPH", 1],
+    ["INHZR", 1],
+    ["INMUN", 1],
+    ["ESVLC", 1],
+    ["CNTNG", 1]
+  ],
+  "portDurationStatistics": [
+    {
+      "5": "17.00",
+      "20": "22.80",
+      "50": "24.90",
+      "75": "34.26",
+      "90": "38.00",
+      "port": "BEANR"
+    },
+    {
+      "5": "12.15",
+      "20": "14.00",
+      "50": "22.50",
+      "75": "39.25",
+      "90": "53.40",
+      "port": "DEHAM"
+    },
+    ...
+  ]
+}
+```
+
+## Author
+
+-   [@Moustafa Kotb](https://www.linkedin.com/in/moustafase/)
