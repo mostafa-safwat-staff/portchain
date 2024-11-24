@@ -5,7 +5,9 @@
     "scripts": {
         "build": "npx nx run-many --target=build",
         "build:production": "npx nx run-many --target=build --production",
-        "start": "npx nx serve portcalls-analyzer-api & npx nx dev portcalls-analyzer-dashboard",
+        "start:api": "npx nx serve portcalls-analyzer-api",
+        "start:dashboard": "npx nx dev portcalls-analyzer-dashboard",
+        "start": "npm run start:api & npm run start:dashboard",
         "test": "npx nx test portcalls-analyzer-api && npx nx test portcalls-analyzer-dashboard",
         "test:e2e": "npx nx e2e portcalls-analyzer-api-e2e",
         "format": "npx nx format",
