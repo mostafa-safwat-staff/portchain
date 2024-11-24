@@ -7,10 +7,5 @@
     "tags": [],
     "// targets": "to see all targets run: nx show project portcalls-analyzer-dashboard --web",
     "targets": {
-       "dev": {
-        "options": {
-            "port": 0
-        }
-       }
     }
 }
