@@ -1,82 +1,125 @@
-# Portchain
+# Port Calls Analysis
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+This project aims to import and analyze container vessel schedules to optimize port operations, enhance logistics planning, and enable data-driven decision-making.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+![Logo](https://media.licdn.com/dms/image/v2/C4D1BAQHVN_6rVpFVWA/company-background_10000/company-background_10000/0/1583507372350/portchain_cover?e=2147483647&v=beta&t=ALkTQOZ8-GOuKxm-CC4LPczEGtde6eyUn8g5FhKuzxA)
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/node?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+## Features
 
-## Finish your CI setup
+-   Import vessel schedules from an external data source
+-   Display statistics for the five ports with the most and fewest port calls, with the number of port calls for each of these five ports.
+-   For each port, the percentiles of port call durations: 5th, 20th, 50th, 75th and 90th percentiles.
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/81Y278yXEn)
+## Design Options
 
+### Option 1:
 
-## Run tasks
+This design option is highly scalable for large datasets, with an event-driven pipeline. The option was not chosen due to its complexity and the time constraint.
 
-To run the dev server for your app, use:
+![Design Option 1](./docs/design-option-1.jpg)
 
-```sh
-npx nx serve portcalls-analyzer-api
+### Option 2:
+
+The pipeline can be build using data technologies like Apache Airflow, Spark, Kubeflow; or with Streaming Processing like Apache Flink or KStream; However, this option was not chosen to showcase programming skills.
+
+### Option 3: (SELECTED)
+
+Simple **Asynchronous Batch Processing** approach. This approach involves processing data in predefined batches, allowing for parallel execution of tasks. Unlike the event-driven or Airflow-based solutions, this method offers a more straightforward implementation but may lack the scalability and flexibility required for large or complex workflows.
+
+## Getting Started
+
+### Tech Stack
+
+**Client:** NX, React, Redux, TailwindCSS
+
+**Server:** Node, Fastify
+
+**Storage:** MongoDB
+
+### Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
 ```
 
-To create a production bundle:
+### Run Locally
 
-```sh
-npx nx build portcalls-analyzer-api
+Clone the project
+
+```bash
+  git clone https://link-to-project
 ```
 
-To see all available targets to run for a project, run:
+Go to the project directory
 
-```sh
-npx nx show project portcalls-analyzer-api
+```bash
+  cd my-project
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+Install dependencies
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
-
-```sh
-npx nx g @nx/node:app demo
+```bash
+  npm install
 ```
 
-To generate a new library, use:
+Start the server
 
-```sh
-npx nx g @nx/node:lib mylib
+```bash
+  npm run start
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+### Running Tests
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+To run tests, run the following command
 
+```bash
+  npm run test
+```
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## Environment Variables
 
-## Install Nx Console
+To run this project, you will need to add the following environment variables to your .env file
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+`API_KEY`
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+`ANOTHER_API_KEY`
 
-## Useful links
+## Deployment
 
-Learn more:
+To deploy this project run
 
-- [Learn more about this workspace setup](https://nx.dev/nx-api/node?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+```bash
+  npm run deploy
+```
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## Authors
+
+-   [@Moustafa Kotb](https://www.linkedin.com/in/moustafase/)
+
+## Usage/Examples
+
+```javascript
+import Component from 'my-project';
+
+function App() {
+    return <Component />;
+}
+```
+
+## Roadmap
+
+-   Additional browser support
+
+-   Add more integrations
+
+## API Reference
+
+#### Get statistics
+
+```http
+  GET /api/statistics
+```
+
