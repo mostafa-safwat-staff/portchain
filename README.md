@@ -76,6 +76,8 @@ Start the app
   npm run start
 ```
 
+You should be able to access the app on http://localhost:3000
+
 ### Running Tests
 
 To run e2e tests, run the following command
@@ -85,6 +87,14 @@ To run e2e tests, run the following command
 ```
 
 Note: Ensure the application is running by executing npm run start beforehand.
+
+
+To run unit tests, run the following command
+
+```bash
+  npm run test
+```
+
 
 ## Other commands
 
